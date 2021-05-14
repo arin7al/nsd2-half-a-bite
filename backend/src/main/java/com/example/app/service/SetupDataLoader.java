@@ -31,8 +31,8 @@ public class SetupDataLoader implements
     @Autowired
     private PrivilegeRepository privilegeRepository;
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+//    @Autowired
+//    private PasswordEncoder passwordEncoder;
 
     @Override
     @Transactional
@@ -54,7 +54,7 @@ public class SetupDataLoader implements
         User user = new User();
         user.setFirstName("Test");
         user.setLastName("Test");
-        user.setPassword(passwordEncoder.encode("test"));
+//        user.setPassword(passwordEncoder.encode("test"));
         user.setEmail("test@test.com");
         user.setRoles(Arrays.asList(adminRole));
         user.setEnabled(true);
