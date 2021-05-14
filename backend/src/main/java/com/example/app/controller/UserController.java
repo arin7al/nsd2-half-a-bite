@@ -40,8 +40,6 @@ public class UserController {
     public Response create(@RequestBody UserDto user) {
     //    userValidator.validate(user);// TODO
         userService.create(user);
-    //    return new ResponseEntity(HttpStatus.ACCEPTED);
-//        return userService.getUser(user.getEmail());
         return Response.builder().statusCode("200").data(userService.getUser(user.getEmail())).build();
     }
 
@@ -52,11 +50,28 @@ public class UserController {
         return Response.builder().statusCode("200").data(isCorrect).build();
     }
 
-    @GetMapping(value = "/get-all-user-info", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/users", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public Response getUsers() {
+    public Response getInvestors() {    //TODO: permission only operator
         return Response.builder().statusCode("200").data(userService.getAllUsers()).build();
     }
 
+    @GetMapping(value = "/user/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public Response getUser() {    //TODO: only operator
+        return Response.builder().statusCode("200").data(userService.getAllUsers()).build();
+    }
 
+    @GetMapping(value = "/tokens", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public Response getTokens() {
+        return Response.builder().statusCode("200").data(userService.getAllUsers()).build();
+    }
+
+    @PatchMapping(value = "/approve-emitter/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public Response approveEmitter(@RequestParam(name = "id") String id) {
+        //TODO change pending emitters, only operator
+        return Response.builder().statusCode("200").build();
+    }
 }
