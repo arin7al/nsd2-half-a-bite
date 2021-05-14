@@ -16,5 +16,6 @@ public class Privilege {
     private Collection<Role> roles;
 
     public Privilege(String name) {
+        this.name = name;
     }
 }

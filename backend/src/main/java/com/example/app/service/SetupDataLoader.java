@@ -9,6 +9,7 @@ import com.example.app.data.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
@@ -31,8 +32,8 @@ public class SetupDataLoader implements
     @Autowired
     private PrivilegeRepository privilegeRepository;
 
-//    @Autowired
-//    private PasswordEncoder passwordEncoder;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Override
     @Transactional
@@ -40,22 +41,23 @@ public class SetupDataLoader implements
 
         if (alreadySetup)
             return;
-        Privilege readPrivilege
-                = createPrivilegeIfNotFound("READ_PRIVILEGE");
-        Privilege writePrivilege
-                = createPrivilegeIfNotFound("WRITE_PRIVILEGE");
+        Privilege tradePrivilege
+                = createPrivilegeIfNotFound("TRADE_PRIVILEGE");
+        Privilege emitPrivilege
+                = createPrivilegeIfNotFound("EMIT_PRIVILEGE");
+        Privilege adminPrivilege
+                = createPrivilegeIfNotFound("ADMIN_PRIVILEGE");
 
-        List<Privilege> adminPrivileges = Arrays.asList(
-                readPrivilege, writePrivilege);
-        createRoleIfNotFound("ROLE_ADMIN", adminPrivileges);
-        createRoleIfNotFound("ROLE_USER", Arrays.asList(readPrivilege));
+        createRoleIfNotFound("ROLE_OPERATOR", Arrays.asList(adminPrivilege, emitPrivilege));
+        createRoleIfNotFound("ROLE_ENTITY", Arrays.asList(emitPrivilege, tradePrivilege));
+        createRoleIfNotFound("ROLE_PERSON", Arrays.asList(tradePrivilege));
 
-        Role adminRole = roleRepository.findByName("ROLE_ADMIN");
+        Role adminRole = roleRepository.findByName("ROLE_OPERATOR");
         User user = new User();
         user.setFirstName("Test");
         user.setLastName("Test");
-//        user.setPassword(passwordEncoder.encode("test"));
-        user.setEmail("test@test.com");
+        user.setPassword(passwordEncoder.encode("test"));
+        user.setEmail("admin@test.com");
         user.setRoles(Arrays.asList(adminRole));
         user.setEnabled(true);
         userRepository.save(user);
@@ -64,7 +66,7 @@ public class SetupDataLoader implements
     }
 
     @Transactional
-    Privilege createPrivilegeIfNotFound(String name) {
+    private Privilege createPrivilegeIfNotFound(String name) {
 
         Privilege privilege = privilegeRepository.findByName(name);
         if (privilege == null) {
@@ -75,7 +77,7 @@ public class SetupDataLoader implements
     }
 
     @Transactional
-    Role createRoleIfNotFound(
+    private Role createRoleIfNotFound(
             String name, Collection<Privilege> privileges) {
 
         Role role = roleRepository.findByName(name);
