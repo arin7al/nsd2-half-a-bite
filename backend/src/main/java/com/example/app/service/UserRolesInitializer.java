@@ -1,5 +1,6 @@
 package com.example.app.service;
 
+import com.example.app.data.Status;
 import com.example.app.data.dto.Privilege;
 import com.example.app.data.dto.Role;
 import com.example.app.data.dto.User;
@@ -58,7 +59,7 @@ public class UserRolesInitializer {
         user.setPassword(passwordEncoder.encode("test"));
         user.setEmail("admin@test.com");
         user.setRoles(Arrays.asList(adminRole));
-        user.setEnabled(true);
+        user.setStatus(Status.APPROVED);
         userRepository.save(user);
 
         alreadySetup = true;
