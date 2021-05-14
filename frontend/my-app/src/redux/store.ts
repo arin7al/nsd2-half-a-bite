@@ -1,9 +1,3 @@
-
-
-
-export type RootState = ReturnType<typeof rootReducer>
-
-
 import { createStore, applyMiddleware } from 'redux'
 import { combineReducers } from 'redux'
 import createSagaMiddleware from 'redux-saga'
@@ -25,6 +19,8 @@ const store = createStore(
 // then run the saga
 sagaMiddleware.run(mySaga)
 export default store;
+export type RootState = ReturnType<typeof rootReducer>
+
 
 
 // render the application
