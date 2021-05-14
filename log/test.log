@@ -64,3 +64,36 @@ Consider the following:
 	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
 	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
 
+2021-05-15 00:41:21.602  INFO 22224 --- [main] c.e.a.App                                : Starting App on ELON-PC with PID 22224 (C:\Users\Elon\IdeaProjects\nsd2-half-a-bite\backend\build\classes\java\main started by Elon in C:\Users\Elon\IdeaProjects\nsd2-half-a-bite\backend)
+2021-05-15 00:41:21.607  INFO 22224 --- [main] c.e.a.App                                : No active profile set, falling back to default profiles: default
+2021-05-15 00:41:22.290  INFO 22224 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-05-15 00:41:22.332  INFO 22224 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 3 JPA repository interfaces.
+2021-05-15 00:41:22.788  INFO 22224 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-05-15 00:41:22.793  INFO 22224 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-05-15 00:41:22.794  INFO 22224 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-05-15 00:41:22.862  INFO 22224 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-05-15 00:41:22.862  INFO 22224 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1233 ms
+2021-05-15 00:41:23.079  INFO 22224 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-15 00:41:23.084  INFO 22224 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-05-15 00:41:23.118  INFO 22224 --- [main] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (Receiver class org.h2.jdbc.JdbcConnection does not define or inherit an implementation of the resolved method abstract getNetworkTimeout()I of interface java.sql.Connection.)
+2021-05-15 00:41:23.124  INFO 22224 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-05-15 00:41:23.161  INFO 22224 --- [task-1] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-15 00:41:23.192  WARN 22224 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-15 00:41:23.212  INFO 22224 --- [task-1] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.18.Final
+2021-05-15 00:41:23.296  INFO 22224 --- [task-1] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-05-15 00:41:23.369  INFO 22224 --- [task-1] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-15 00:41:23.443  INFO 22224 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-05-15 00:41:23.755  INFO 22224 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-15 00:41:23.760  INFO 22224 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-15 00:41:23.795  INFO 22224 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: a67ef2b2-bf8d-4172-a994-96255b6d4306
+
+2021-05-15 00:41:23.841  INFO 22224 --- [main] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ed7b9c5, org.springframework.security.web.context.SecurityContextPersistenceFilter@696105c4, org.springframework.security.web.header.HeaderWriterFilter@76104df5, org.springframework.security.web.csrf.CsrfFilter@8ecc457, org.springframework.security.web.authentication.logout.LogoutFilter@7dc92a06, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5edd9b4f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2dcd451f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@105dc246, org.springframework.security.web.session.SessionManagementFilter@6bf28f61, org.springframework.security.web.access.ExceptionTranslationFilter@283ecb4b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5977bdea]
+2021-05-15 00:41:23.895  INFO 22224 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-15 00:41:24.026  INFO 22224 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-05-15 00:41:24.190  INFO 22224 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-05-15 00:41:24.201  INFO 22224 --- [main] c.e.a.App                                : Started App in 2.839 seconds (JVM running for 3.286)
+2021-05-15 00:42:05.405  INFO 22224 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-15 00:42:05.405  INFO 22224 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-05-15 00:42:05.409  INFO 22224 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 4 ms

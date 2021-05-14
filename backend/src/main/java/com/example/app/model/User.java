@@ -2,6 +2,7 @@ package com.example.app.model;
 
 import com.example.app.data.dto.Role;
 import java.util.Collection;
+import java.util.Optional;
 import java.util.UUID;
 
 
@@ -12,6 +13,25 @@ public class User {
     String lastName;
     String password;
     Collection<Role> roles;
+
+    public com.example.app.data.dto.User transformToDto() {
+        var userDTO = new com.example.app.data.dto.User();
+        userDTO.setEmail(email);
+        userDTO.setFirstName(firstName);
+        userDTO.setLastName(lastName);
+        userDTO.setPassword(password);
+        userDTO.setRoles(roles);
+
+        return userDTO;
+    }
+
+    public User(com.example.app.data.dto.User user) {
+        email = user.getEmail();
+        firstName = user.getFirstName();
+        lastName = user.getLastName();
+        password = user.getLastName();
+        roles = user.getRoles();
+    }
 
     public UUID getId() {
         return id;

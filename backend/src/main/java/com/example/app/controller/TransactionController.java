@@ -1,6 +1,5 @@
 package com.example.app.controller;
 
-import com.example.app.controller.dto.Response;
 import com.example.app.service.AppService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
