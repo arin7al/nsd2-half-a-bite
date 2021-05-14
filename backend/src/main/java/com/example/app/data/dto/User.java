@@ -1,5 +1,6 @@
 package com.example.app.data.dto;
 
+import com.example.app.data.Status;
 import com.sun.istack.NotNull;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -39,5 +40,6 @@ public class User {
             inverseJoinColumns = @JoinColumn(
                     name = "role_name", referencedColumnName = "name"))
     Collection<Role> roles;
-    boolean enabled;
+    @Enumerated(EnumType.STRING)
+    Status status;
 }
