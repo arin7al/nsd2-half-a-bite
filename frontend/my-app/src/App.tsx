@@ -1,10 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      Hello
+      <BrowserRouter>
+        <main className="content">
+          <Switch>
+            <Route path="/">
+              hi
+            </Route>
+          </Switch>
+        </main>
+      </BrowserRouter>
     </div>
   );
 }
