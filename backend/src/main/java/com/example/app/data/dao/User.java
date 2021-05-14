@@ -1,10 +1,9 @@
-package com.example.app.data.dto;
+package com.example.app.data.dao;
 
 import com.example.app.data.Status;
 import com.sun.istack.NotNull;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import java.util.Collection;

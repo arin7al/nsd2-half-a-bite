@@ -1,4 +1,4 @@
-package com.example.app.data.dto;
+package com.example.app.data.dao;
 
 import lombok.NoArgsConstructor;
 
