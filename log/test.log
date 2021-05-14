@@ -97,3 +97,72 @@ Using generated security password: a67ef2b2-bf8d-4172-a994-96255b6d4306
 2021-05-15 00:42:05.405  INFO 22224 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2021-05-15 00:42:05.405  INFO 22224 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
 2021-05-15 00:42:05.409  INFO 22224 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 4 ms
+2021-05-15 01:05:01.574  INFO 37536 --- [main] c.e.a.App                                : Starting App on MacBook-Air-Naumova.local with PID 37536 (/Volumes/да это жестко/учеба/разработка/nsd2-half-a-bite/backend/build/classes/java/main started by arina in /Volumes/да это жестко/учеба/разработка/nsd2-half-a-bite/backend)
+2021-05-15 01:05:01.585  INFO 37536 --- [main] c.e.a.App                                : No active profile set, falling back to default profiles: default
+2021-05-15 01:05:03.663  INFO 37536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-05-15 01:05:03.846  INFO 37536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 158ms. Found 3 JPA repository interfaces.
+2021-05-15 01:05:05.121  INFO 37536 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-05-15 01:05:05.140  INFO 37536 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-05-15 01:05:05.141  INFO 37536 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-05-15 01:05:05.400  INFO 37536 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-05-15 01:05:05.401  INFO 37536 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3759 ms
+2021-05-15 01:05:05.958  INFO 37536 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-15 01:05:05.976  INFO 37536 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-05-15 01:05:06.052  INFO 37536 --- [main] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (Receiver class org.h2.jdbc.JdbcConnection does not define or inherit an implementation of the resolved method abstract getNetworkTimeout()I of interface java.sql.Connection.)
+2021-05-15 01:05:06.068  INFO 37536 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-05-15 01:05:06.189  INFO 37536 --- [task-1] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-15 01:05:06.351  WARN 37536 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-15 01:05:06.441  INFO 37536 --- [task-1] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.18.Final
+2021-05-15 01:05:06.655  INFO 37536 --- [task-1] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-05-15 01:05:06.850  INFO 37536 --- [task-1] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-15 01:05:07.177  INFO 37536 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-05-15 01:05:08.085  INFO 37536 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-15 01:05:08.111  INFO 37536 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-15 01:05:08.297  INFO 37536 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: eaa48209-744d-4863-bcf9-155cffc7d540
+
+2021-05-15 01:05:08.403  INFO 37536 --- [main] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3fe24670, org.springframework.security.web.context.SecurityContextPersistenceFilter@1fcc3461, org.springframework.security.web.header.HeaderWriterFilter@1a77eb6, org.springframework.security.web.csrf.CsrfFilter@6bc62bb9, org.springframework.security.web.authentication.logout.LogoutFilter@28295554, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@71469e01, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@571db8b4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3c46e6f6, org.springframework.security.web.session.SessionManagementFilter@1a8e44fe, org.springframework.security.web.access.ExceptionTranslationFilter@44392e64, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@516b84d1]
+2021-05-15 01:05:08.579  INFO 37536 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-15 01:05:08.893  INFO 37536 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-05-15 01:05:09.395  INFO 37536 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-05-15 01:05:09.418  INFO 37536 --- [main] c.e.a.App                                : Started App in 8.474 seconds (JVM running for 9.907)
+2021-05-15 01:05:26.835  INFO 37536 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-15 01:05:26.836  INFO 37536 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2021-05-15 01:05:26.846  INFO 37536 --- [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 10 ms
+2021-05-15 01:05:36.045  INFO 37536 --- [http-nio-8080-exec-2] c.e.a.c.AppController                    : Roles initialized!
+2021-05-15 01:33:30.712  INFO 37536 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-05-15 01:33:30.719  INFO 37536 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-05-15 01:33:30.740  INFO 37536 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-15 01:33:30.741  INFO 37536 --- [SpringContextShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2021-05-15 01:33:30.750  INFO 37536 --- [SpringContextShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2021-05-15 01:33:52.345  INFO 37812 --- [main] c.e.a.App                                : Starting App on MacBook-Air-Naumova.local with PID 37812 (/Volumes/да это жестко/учеба/разработка/nsd2-half-a-bite/backend/build/classes/java/main started by arina in /Volumes/да это жестко/учеба/разработка/nsd2-half-a-bite/backend)
+2021-05-15 01:33:52.359  INFO 37812 --- [main] c.e.a.App                                : No active profile set, falling back to default profiles: default
+2021-05-15 01:33:53.872  INFO 37812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-05-15 01:33:53.978  INFO 37812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97ms. Found 3 JPA repository interfaces.
+2021-05-15 01:33:54.766  INFO 37812 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2021-05-15 01:33:54.779  INFO 37812 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2021-05-15 01:33:54.781  INFO 37812 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-05-15 01:33:54.953  INFO 37812 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2021-05-15 01:33:54.953  INFO 37812 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2543 ms
+2021-05-15 01:33:55.437  INFO 37812 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-15 01:33:55.451  INFO 37812 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2021-05-15 01:33:55.521  INFO 37812 --- [main] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (Receiver class org.h2.jdbc.JdbcConnection does not define or inherit an implementation of the resolved method abstract getNetworkTimeout()I of interface java.sql.Connection.)
+2021-05-15 01:33:55.532  INFO 37812 --- [main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2021-05-15 01:33:55.594  INFO 37812 --- [task-1] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-15 01:33:55.684  WARN 37812 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-15 01:33:55.775  INFO 37812 --- [task-1] o.h.Version                              : HHH000412: Hibernate ORM core version 5.4.18.Final
+2021-05-15 01:33:56.006  INFO 37812 --- [task-1] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-05-15 01:33:56.234  INFO 37812 --- [task-1] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-05-15 01:33:56.487  INFO 37812 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-05-15 01:33:57.120  INFO 37812 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-15 01:33:57.162  INFO 37812 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-15 01:33:57.238  INFO 37812 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 28d759b7-41d7-4766-8948-2c9bc74afe46
+
+2021-05-15 01:33:57.345  INFO 37812 --- [main] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@625db0e0, org.springframework.security.web.context.SecurityContextPersistenceFilter@65b5b5ed, org.springframework.security.web.header.HeaderWriterFilter@47f0e078, org.springframework.security.web.csrf.CsrfFilter@5bc14211, org.springframework.security.web.authentication.logout.LogoutFilter@571db8b4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@795eddda, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ab28416, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@511d568f, org.springframework.security.web.session.SessionManagementFilter@705d914f, org.springframework.security.web.access.ExceptionTranslationFilter@3c1908c8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7178d811]
+2021-05-15 01:33:57.492  INFO 37812 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-15 01:33:57.752  INFO 37812 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-05-15 01:33:58.124  INFO 37812 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-05-15 01:33:58.145  INFO 37812 --- [main] c.e.a.App                                : Started App in 6.33 seconds (JVM running for 7.625)

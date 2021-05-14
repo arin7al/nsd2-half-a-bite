@@ -1,5 +1,6 @@
 package com.example.app.controller;
 
+import com.example.app.data.dto.Login;
 import com.example.app.data.dto.UserDto;
 import com.example.app.service.UserRolesInitializer;
 import com.example.app.service.UserService;
@@ -27,6 +28,7 @@ public class UserController {
     //  private UserValidator userValidator;
 
     @GetMapping("/init")
+    @ResponseBody
     public Response initializeRoles() {
       rolesInitializer.initializeRoles();
       log.info("Roles initialized!");
@@ -34,16 +36,27 @@ public class UserController {
     }
 
     @PostMapping(value = "/register", produces = MediaType.APPLICATION_JSON_VALUE)
-    public @ResponseBody
-    UserDto create(@RequestBody UserDto user) {
+    @ResponseBody
+    public Response create(@RequestBody UserDto user) {
     //    userValidator.validate(user);// TODO
         userService.create(user);
     //    return new ResponseEntity(HttpStatus.ACCEPTED);
-        return userService.getUser(user.getEmail());
+//        return userService.getUser(user.getEmail());
+        return Response.builder().statusCode("200").data(userService.getUser(user.getEmail())).build();
     }
 
-    @GetMapping(value = "/get-user-info", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<com.example.app.data.dao.User> getUsers() {
-        return userService.getAllUsers();
+    @PostMapping(value = "/authenticate", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public Response authenticate(@RequestBody Login login) {
+        boolean isCorrect = userService.findIfCorrect(login);
+        return Response.builder().statusCode("200").data(isCorrect).build();
     }
+
+    @GetMapping(value = "/get-all-user-info", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public Response getUsers() {
+        return Response.builder().statusCode("200").data(userService.getAllUsers()).build();
+    }
+
+
 }
