@@ -35,4 +35,15 @@ public class AppController {
     }
     return Response.builder().statusCode("200").build();
   }
+
+    @GetMapping("/get-user-info")
+    public Response getUsers() {
+        try {
+            log.info("registering");
+
+        } catch (Exception e) {
+
+        }
+        return Response.builder().statusCode("200").build();
+    }
 }
