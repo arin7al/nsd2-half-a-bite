@@ -7,8 +7,8 @@ import com.example.app.data.dao.User;
 import com.example.app.data.repositories.PrivilegeRepository;
 import com.example.app.data.repositories.RoleRepository;
 import com.example.app.data.repositories.UserRepository;
+import com.example.app.utils.EncryptorDecryptor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -28,9 +28,6 @@ public class UserRolesInitializer {
 
     @Autowired
     private PrivilegeRepository privilegeRepository;
-
-    @Autowired
-    private PasswordEncoder passwordEncoder;
 
     @Transactional
     public void initializeRoles() {
@@ -52,7 +49,7 @@ public class UserRolesInitializer {
         User user = new User();
         user.setFirstName("Test");
         user.setLastName("Test");
-        user.setPassword(passwordEncoder.encode("test"));
+        user.setPassword(EncryptorDecryptor.encrypt("test"));
         user.setEmail("admin@test.com");
         user.setRoles(Arrays.asList(adminRole));
         user.setStatus(Status.APPROVED);

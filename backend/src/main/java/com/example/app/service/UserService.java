@@ -1,8 +1,9 @@
 package com.example.app.service;
 
 import com.example.app.data.dto.Login;
-import com.example.app.data.repositories.UserRepository;
 import com.example.app.data.dto.UserDto;
+import com.example.app.data.repositories.UserRepository;
+import com.example.app.utils.EncryptorDecryptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,7 +34,7 @@ public class UserService {
     }
 
     public boolean findIfCorrect(Login login) {
-        var users = userRepository.findAllByEmailAndPassword(login.getEmail(), login.getPassword());
+        var users = userRepository.findAllByEmailAndPassword(login.getEmail(), EncryptorDecryptor.encrypt(login.getPassword()));
         return !users.isEmpty();
     }
 
