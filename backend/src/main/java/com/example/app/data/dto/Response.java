@@ -1,4 +1,4 @@
-package com.example.app.controller.dto;
+package com.example.app.data.dto;
 
 import java.io.Serializable;
 import java.util.List;

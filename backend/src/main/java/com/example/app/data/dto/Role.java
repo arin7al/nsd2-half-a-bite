@@ -20,11 +20,12 @@ public class Role {
     @JoinTable(
             name = "roles_privileges",
             joinColumns = @JoinColumn(
-                    name = "role_id", referencedColumnName = "id"),
+                    name = "role_name", referencedColumnName = "name"),
             inverseJoinColumns = @JoinColumn(
-                    name = "privilege_id", referencedColumnName = "id"))
+                    name = "privilege_name", referencedColumnName = "name"))
     private Collection<Privilege> privileges;
 
     public Role(String name) {
+        this.name = name;
     }
 }
