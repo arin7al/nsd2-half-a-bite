@@ -1,10 +1,11 @@
 package com.example.app.service;
 
 import com.example.app.data.repositories.UserRepository;
-import com.example.app.model.User;
+import com.example.app.data.dto.UserDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -13,20 +14,24 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public void create(User user) {
-        userRepository.save(user.transformToDto());
+    public void create(UserDto user) {
+        userRepository.save(user.transformToDao());
     }
 
     public void getUser(UUID id) {
         userRepository.findById(id.toString());
     }
 
-    public User getUser(String email) {
+    public UserDto getUser(String email) {
         var users = userRepository.findAllByEmail(email);
         if(users.isEmpty())
             return null;
 
-        var userModel = new User(users.stream().findFirst().get());
+        var userModel = new UserDto(users.stream().findFirst().get());
         return userModel;
+    }
+
+    public List<com.example.app.data.dao.User> getAllUsers() {
+        return userRepository.findAll();
     }
 }
