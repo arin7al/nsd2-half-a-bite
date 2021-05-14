@@ -10,9 +10,6 @@ import java.util.Collection;
 @NoArgsConstructor
 public class Role {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-
     private String name; //operator, emitent, investor
     @ManyToMany(mappedBy = "roles")
     private Collection<User> users;
@@ -25,4 +22,7 @@ public class Role {
             inverseJoinColumns = @JoinColumn(
                     name = "privilege_id", referencedColumnName = "id"))
     private Collection<Privilege> privileges;
+
+    public Role(String name) {
+    }
 }
