@@ -1,13 +1,11 @@
 package com.example.app.controller;
 
-import java.util.Collections;
-
 import com.example.app.service.UserRolesInitializer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.example.app.controller.dto.Response;
+import com.example.app.data.dto.Response;
 import com.example.app.service.AppService;
 import lombok.extern.slf4j.Slf4j;
 
@@ -28,7 +26,7 @@ public class AppController {
   }
 
   @GetMapping("/register")
-  public Response sayHello() {
+  public Response registerAUser() {
     try {
       log.info("registering");
 
