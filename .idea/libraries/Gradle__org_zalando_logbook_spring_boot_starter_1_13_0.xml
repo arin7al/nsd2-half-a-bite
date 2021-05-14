@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.zalando:logbook-spring-boot-starter:1.13.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.zalando/logbook-spring-boot-starter/1.13.0/171d8881d494edfcca5a056ef44f0a02972d2727/logbook-spring-boot-starter-1.13.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.zalando/logbook-spring-boot-starter/1.13.0/bc11539bddb265a4c26d6ba16e3020846617dc62/logbook-spring-boot-starter-1.13.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

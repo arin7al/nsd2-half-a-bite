@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.zalando:logbook-core:1.13.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.zalando/logbook-core/1.13.0/c70f34559c20b87d165ad12285caf854f0b8fc6/logbook-core-1.13.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.zalando/logbook-core/1.13.0/3270734036113219aabfeae8cc90d3ed94b81890/logbook-core-1.13.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
