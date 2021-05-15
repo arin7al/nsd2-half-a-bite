@@ -1,5 +1,14 @@
 export type jsx = Array<React.ComponentType> | null
 
+export interface ResponseGenerator {
+    config?: any,
+    data?: any,
+    headers?: any,
+    request?: any,
+    status?: number,
+    statusText?: string
+}
+
 //actions
 export enum SagaActionTypes {
     REQUEST_LOGIN = 'REQUEST_LOGIN',
