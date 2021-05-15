@@ -43,7 +43,10 @@ export default function registration() {
 
                         <Button variant="primary" type="submit">
                         Submit
-                        </Button>
+                        </Button> 
+                        <br/>
+                        <br />
+                        <a href="#!" className="text-muted">У вас уже есть аккаунт?</a>
                     </Form>
                 </Card.Body>
                 </Card>

@@ -1,18 +1,19 @@
 import React from 'react';
-// import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Login from './components/Login'
 
 function App() {
   return (
     <div className="App">
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <main className="content">
           <Switch>
-            <Route path="/">
-              hi
+            <Route path="/login">
+              <Login/>
             </Route>
           </Switch>
         </main>
-      </BrowserRouter> */}
+      </BrowserRouter>
     </div>
   );
 }

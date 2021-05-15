@@ -1,5 +1,12 @@
 import React from 'react'
 import { Nav } from 'react-bootstrap';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Login from './Login'
 
 
 export default function NavBar() {
@@ -9,7 +16,7 @@ export default function NavBar() {
         onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
       >
         <Nav.Item>
-          <Nav.Link href="/home">Active</Nav.Link>
+          <Nav.Link>Login</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link eventKey="link-1">Link</Nav.Link>

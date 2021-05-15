@@ -26,7 +26,7 @@ const Login = () => {
                         <Button variant="primary" type="submit">
                             Submit
                         </Button>
-                        <a href="#!" className="text-muted">У вас уже есть аккаунт?</a>
+                        
                     </Form>
                 </Card.Body>
             </Card>

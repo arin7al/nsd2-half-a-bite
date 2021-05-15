@@ -29,6 +29,12 @@ const TradeOffer = () => {
                                 </Form.Control>
                             </Form.Group>
 
+                            <Form.Group>
+                                <Form.Label>Choose what kind of token you want trade for</Form.Label>
+                                <Form.Control type="Username" placeholder="Token" />
+                            </Form.Group>
+                            {/* или окно с токенами которые есть у другого пользавателя */}
+
                             <Button variant="primary" type="submit">
                             Buy
                             </Button>
