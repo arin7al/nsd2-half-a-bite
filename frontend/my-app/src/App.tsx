@@ -1,10 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+// import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <main className="content">
           <Switch>
             <Route path="/">
@@ -12,7 +12,7 @@ function App() {
             </Route>
           </Switch>
         </main>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
 }

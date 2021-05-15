@@ -1,16 +1,11 @@
 import React from 'react'
-import { Button, Card, Container, Row, ListGroup, Col } from 'react-bootstrap';
+import { Button, Card, Container, Row, ListGroup, Col, Form } from 'react-bootstrap';
 
-// Depending on what kind of user it is we render different cards
-
-const Profile = () => {
-
-
-
+const CreateToken = () => {
     return (
         <Container className="justify-content-md-right">
             <Row>
-                <Col lg={3}>
+                {/* <Col lg={3}>
                         <Card>
                         <Card.Body>
                         <Card.Title>Profile</Card.Title>
@@ -29,17 +24,28 @@ const Profile = () => {
 
                         </Card.Body>
                     </Card>
-                </Col>
-                    {/* или для каждой инвестиции нужен отдельная карточка */}
+                </Col> */}
+
                 <Col >
                 <Card>
                 <Card.Body>
-                        <Card.Header>Your investements</Card.Header>
-                            <ListGroup variant="flush">
-                                <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                                <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                                <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-                            </ListGroup>
+                <Form>
+                        <Form.Group controlId="formBasicEmail">
+                            <Form.Label>Token Name</Form.Label>
+                                <Form.Control type="email" placeholder="Enter email" />
+                            </Form.Group>
+
+                            <Form.Group controlId="formBasicPassword">
+                                <Form.Label>Amount made</Form.Label>
+                                <Form.Control type="password" placeholder="Password" />
+                            </Form.Group>
+
+
+                        <Button variant="primary" type="submit">
+                            Submit
+                        </Button>
+                        <a href="#!" className="text-muted">У вас уже есть аккаунт?</a>
+                    </Form>
                             </Card.Body>
                 </Card>
                 </Col>
@@ -47,6 +53,7 @@ const Profile = () => {
             </Row>
         </Container>
     )
-}
+};
 
-export default Profile
+
+export default CreateToken
