@@ -2,11 +2,14 @@ import React, { useState, useEffect } from 'react'
 import { Button, Card, Form, Row, Container } from 'react-bootstrap';
 import { useAction } from '../hooks/useAction';
 import { useTypedSelector } from '../hooks/useTypedSelector';
+import { requestLogin } from '../redux/actionCreators/main.action';
 
 const Login = () => {
     //state
     const [loginInput, setLoginInput] = useState('');
     const [passwordInput, setPasswordInput] = useState('');
+
+    //how data is got
     const pseudoData = useTypedSelector(state => state.main.pseudoData)
 
     //
@@ -21,8 +24,10 @@ const Login = () => {
         setPasswordInput(e.target.value);
     }
     const handleSubmit = () => {
+
         if (loginInput !== '' || passwordInput !== '') {
-            // login(loginInput, passwordInput)
+            requestLogin(loginInput, passwordInput)
+            console.log('request sent')
         }
     }
     return (
@@ -48,7 +53,7 @@ const Login = () => {
 
                             <Button onClick={() => handleSubmit} variant="primary" type="submit">
                                 {pseudoData}
-                                {/* here it is */}
+
                             </Button>
 
                         </Form>

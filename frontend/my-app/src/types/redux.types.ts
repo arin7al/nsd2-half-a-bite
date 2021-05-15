@@ -1,6 +1,9 @@
 export type jsx = Array<React.ComponentType> | null
 
 //actions
+export enum SagaActionTypes {
+    REQUEST_LOGIN = 'REQUEST_LOGIN',
+}
 
 export enum GeneralActionTypes {
 
@@ -19,12 +22,12 @@ export enum OperatorActionTypes {
 
 }
 
-export enum ClientActionTypes {
+export enum InvestorActionTypes {
     TRANSFER_COINS = 'TRANSFER_COINS',
     BUY_COINS = 'BUY_COINS',
     GET_NOTIFICATIONS = 'GET_NOTIFICATIONS',
 }
-export enum EmiterActionTypes {
+export enum IssuerActionTypes {
     GET_RIGHTS = 'GET_RIGHTS',
     REQUEST_EMMISSION = 'REQUEST_EMMISSION',
     BUY_COIN = 'BUY_COIN',
@@ -36,5 +39,14 @@ export interface generalState {
     isLogged: boolean,
     userStatus: string | null,
     pseudoData: string
+
+}
+export interface issuerState {
+
+}
+export interface operatorState {
+
+}
+export interface investorState {
 
 }

@@ -1,4 +1,4 @@
-import { GeneralActionTypes } from './../../types/redux.types';
+import { GeneralActionTypes, SagaActionTypes } from './../../types/redux.types';
 
 //actions
 export const loadOn = () => {
@@ -8,3 +8,7 @@ export const loadOff = () => {
     return ({ type: GeneralActionTypes.FINISH_LOADING })
 }
 
+//saga actions
+export const requestLogin = (login: string, password: string) => {
+    return ({ type: SagaActionTypes.REQUEST_LOGIN, payload: { login, password } })
+}
