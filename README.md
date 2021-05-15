@@ -10,11 +10,16 @@ cd nsd2-half-a-bite/
 
 Run backend:
 cd backend/
+Docker run:
+docker build \
+    --build-arg JAR_FILE=NSD2-half-a-bite-0.0.1-SNAPSHOT.jar \
+    -t NSD2-half-a-bite:0.0.1-SNAPSHOT \
+    .
 
-Build the project
-. ./gradlew bootJar
-
-Run the Spring Boot application ./gradlew bootRun
+Gradle run:
+./gradlew bootJar
+./gradlew bootRun
+---
 Use http://127.0.0.1:8080/swagger-ui/ for swagger UI
 
 Can use remote debug in IDE on port 5005
