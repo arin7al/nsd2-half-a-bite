@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import { Button, Card, Form, Row, Container } from 'react-bootstrap';
 import { useAction } from '../hooks/useAction';
+import { useTypedSelector } from '../hooks/useTypedSelector';
 
 const Login = () => {
     //state
     const [loginInput, setLoginInput] = useState('');
     const [passwordInput, setPasswordInput] = useState('');
-    const { login } = useAction();
+    const pseudoData = useTypedSelector(state => state.main.pseudoData)
+
+    //
+
+    // const { login } = useAction();
 
     // handlers
     const handleLogin = (e: any) => {
@@ -17,7 +22,7 @@ const Login = () => {
     }
     const handleSubmit = () => {
         if (loginInput !== '' || passwordInput !== '') {
-            login(loginInput, passwordInput)
+            // login(loginInput, passwordInput)
         }
     }
     return (
@@ -42,8 +47,9 @@ const Login = () => {
 
 
                             <Button onClick={() => handleSubmit} variant="primary" type="submit">
-                                Submit
-                        </Button>
+                                {pseudoData}
+                                {/* here it is */}
+                            </Button>
 
                         </Form>
                     </Card.Body>

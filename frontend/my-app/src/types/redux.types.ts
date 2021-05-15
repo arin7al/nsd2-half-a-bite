@@ -35,4 +35,6 @@ export interface generalState {
     isLoading: boolean,
     isLogged: boolean,
     userStatus: string | null,
+    pseudoData: string
+
 }

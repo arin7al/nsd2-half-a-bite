@@ -1,9 +1,11 @@
 import { GeneralActionTypes, generalState } from './../../types/redux.types';
 
+//data store
 const initialState: generalState = {
     isLoading: false,
     isLogged: false,
     userStatus: null,
+    pseudoData: 'hello'
 }
 
 export default (state = initialState, action: any) => {
