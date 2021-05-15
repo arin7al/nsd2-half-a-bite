@@ -15,16 +15,8 @@ import TradeOfferFromUser from './components/TradeOfferFromUser'
 
 ReactDOM.render(
   <React.StrictMode>
-    <NavBar/>
+
     <App />
-    <Registration />
-    <Login />
-    <Profile/>
-    <BuyToken />
-    <TradeOffer />
-    <OperatorControl />
-    <TradeOfferFromUser />
-    <Footer />
   </React.StrictMode>,
   document.getElementById('root')
 );
