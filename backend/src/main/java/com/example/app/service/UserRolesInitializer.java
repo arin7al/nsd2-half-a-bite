@@ -1,22 +1,19 @@
 package com.example.app.service;
 
-import com.example.app.data.dto.Privilege;
-import com.example.app.data.dto.Role;
-import com.example.app.data.dto.User;
+import com.example.app.data.Status;
+import com.example.app.data.dao.Privilege;
+import com.example.app.data.dao.Role;
+import com.example.app.data.dao.User;
 import com.example.app.data.repositories.PrivilegeRepository;
 import com.example.app.data.repositories.RoleRepository;
 import com.example.app.data.repositories.UserRepository;
+import com.example.app.utils.EncryptorDecryptor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationListener;
-import org.springframework.context.event.ContextRefreshedEvent;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
 
 @Service
 public class UserRolesInitializer {
@@ -31,9 +28,6 @@ public class UserRolesInitializer {
 
     @Autowired
     private PrivilegeRepository privilegeRepository;
-
-    @Autowired
-    private PasswordEncoder passwordEncoder;
 
     @Transactional
     public void initializeRoles() {
@@ -55,10 +49,10 @@ public class UserRolesInitializer {
         User user = new User();
         user.setFirstName("Test");
         user.setLastName("Test");
-        user.setPassword(passwordEncoder.encode("test"));
+        user.setPassword(EncryptorDecryptor.encrypt("test"));
         user.setEmail("admin@test.com");
         user.setRoles(Arrays.asList(adminRole));
-        user.setEnabled(true);
+        user.setStatus(Status.APPROVED);
         userRepository.save(user);
 
         alreadySetup = true;
