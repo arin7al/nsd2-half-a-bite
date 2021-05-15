@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from 'react'
 import { Button, Card, Form, Row, Container } from 'react-bootstrap';
+import { useAction } from '../hooks/useAction';
 
 const Login = () => {
     //state
-    const [login, setLogin] = useState('');
-    const [password, setPassword] = useState('');
-
+    const [loginInput, setLoginInput] = useState('');
+    const [passwordInput, setPasswordInput] = useState('');
+    const { login } = useAction();
 
     // handlers
     const handleLogin = (e: any) => {
-        setLogin(e.target.value);
+        setLoginInput(e.target.value);
     }
     const handlePassword = (e: any) => {
-        setPassword(e.target.value);
+        setPasswordInput(e.target.value);
     }
     const handleSubmit = () => {
-        if (login !== '' || password !== '') {
-
+        if (loginInput !== '' || passwordInput !== '') {
+            login(loginInput, passwordInput)
         }
     }
     return (
@@ -28,7 +29,7 @@ const Login = () => {
                         <Form>
                             <Form.Group controlId="formBasicEmail">
                                 <Form.Label>Email address</Form.Label>
-                                <Form.Control value={login} onChange={(e) => handleLogin(e)} type="email" placeholder="Enter email" />
+                                <Form.Control value={loginInput} onChange={(e) => handleLogin(e)} type="email" placeholder="Enter email" />
                                 <Form.Text className="text-muted">
                                     We'll never share your email with anyone else.
                                 </Form.Text>
@@ -36,7 +37,7 @@ const Login = () => {
 
                             <Form.Group controlId="formBasicPassword">
                                 <Form.Label>Password</Form.Label>
-                                <Form.Control value={password} onChange={(e) => handlePassword(e)} type="password" placeholder="Password" />
+                                <Form.Control value={passwordInput} onChange={(e) => handlePassword(e)} type="password" placeholder="Password" />
                             </Form.Group>
 
 
