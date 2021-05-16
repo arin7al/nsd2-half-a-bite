@@ -16,18 +16,17 @@ export default function NavBar() {
         onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
       >
         <Nav.Item>
-          <Nav.Link>Login</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="link-1">Link</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="link-2">Link</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="disabled" disabled>
-            Disabled
+          <Nav.Link>
+          <Link to="/login">Login</Link>
           </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link>
+          <Link to="/profile">Profile</Link>
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link> Тута все транзакции </Nav.Link>
         </Nav.Item>
       </Nav> 
     )
